@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Show</title>
+</head>
+
+<body>
+    
+    <table border="1">
+        <tr>
+            {% if name != null %}
+            <th>Name</th>
+            {% endif %}
+            {% if roll_no != null %}
+            <th>Roll No.</th>
+            {% endif %}
+            {% if gender != null %}
+            <th>Gender</th>
+            {% endif %}
+            {% if phone != null %}
+            <th colspan="2">Phone Number</th>
+            {% endif %}
+        </tr>
+        {% for i in school %}
+        <tr>
+            {% if name != null %}
+            <td>{{i.name}}</td>
+            {% endif %}
+            {% if roll_no != null %}
+            <td>{{i.roll_no}}</td>
+            {% endif %}
+            {% if gender != null %}
+            <td>{{i.gender}}</td>
+            {% endif %}
+            {% if phone != null %}
+            <td>{{i.phone.phone1}}</td>
+            <td>{{i.phone.phone2}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

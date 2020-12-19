@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Select Fields to Show</title>
+</head>
+
+<body>
+    <form method="post" action="/show_data/">
+        {% csrf_token %}
+        <h3>Choose Columns</h3>
+        Name
+        <input type="checkbox" name="name" id="name" value="name"><br>
+        Roll No
+        <input type="checkbox" name="roll_no" id="roll_no" value="roll_no"><br>
+        Gender
+        <input type="checkbox" name="gender" id="gender" value="gender"><br>
+        Phone
+        <input type="checkbox" name="phone" id="phone" value="phone"><br>
+        <input name="submit" type="submit" value="submit">
+    </form>
+</body>
+
+</html>
